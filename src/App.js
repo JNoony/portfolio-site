@@ -21,7 +21,8 @@ export default function App(){
                 <div className="col"></div>
             </div>
 
-            <section className="visual">
+            <h2>작업중...</h2>
+            {/* <section className="visual">
                 <h2 className="visual-txt">
                     <strong className="visual-txt-style">markup<br/>developer</strong>
                     <span className="visual-txt-style text">web<br/>publisher</span>
@@ -35,7 +36,7 @@ export default function App(){
                 <div className="con-box row">
                     <List />
                 </div>
-            </section>
+            </section> */}
         </main>
     </>)
 }
