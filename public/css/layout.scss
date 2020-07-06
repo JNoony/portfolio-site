@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+
+.row{
+    width: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+// grid-layout 12
+// margin = 24px -> 0.0125%
+// Total wid = 99.8375%
+// ※디바이스 :: media query screen size ※
+// *pc screen*
+// 1920 +       (+xlarge)
+// 1919 - 1600  (+large)
+// 1599 - 1440  (+large)
+// 1439 - 1280  (+large tablet/medium)
+// 1279 - 1024  (+large tablet/medium)
+// 1023 - 960  (+small tablet/small)
+// 959 - 840  (+large tablet/large handset/	small)
+$wid1 : 8.3197%;
+
+// grid-layout 8
+// margin = 16px -> 0.0266%
+// Total wid = 99.7606%
+// ※디바이스 :: media query screen size ※
+// *tablet screen*
+// 839 - 720  (+large tablet/large handset/	small)
+// 719 - 600  (+small tablet/medium  handset/small)
+@media screen and (min-width:600px) and (max-width:839px) {
+    $wid1 : 11.0845%;
+}
+
+// grid-layout 4
+// margin = 16px -> 0.04%
+// Total wid = 99.8%
+// ※디바이스 :: media query screen size ※
+// *mobile screen*
+// 599 - 480  (+large handset/small handset/xsmall)
+// 479 - 400  (+large handset/xsmall)
+// 399 - 360  (+medium handset/xsmall)
+// 359 - 320  (+small handset/xsmall)
+@media screen and (min-width:600px) and (max-width:839px) {
+    $wid1 : 24.95%;
+}
+
+
+.col-1{ width:$wid1; }
+.col-2{ width:$wid1*2; }
+.col-3{ width:$wid1*3; }
+.col-4{ width:$wid1*4; }
+.col-5{ width:$wid1*5; }
+.col-6{ width:$wid1*6; }
+
+
+@mixin borderRight {
+    border-right: 1px solid #f6f6f6;
+}
+.borderRight{@include borderRight;} 
+.col-1,.col-2,.col-3,.col-4{ @extend .borderRight; }
+
+.bg-border{
+    position: fixed;
+    top: 0;left: 0;right: 0;bottom: 0;
+    z-index: -10;
+}
+
+.con-box.row{
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    max-width: 1200px;
+}
+.con-box-list{
+    position: relative;
+    width: 47.5%;
+    margin:0 auto;
+
+    .list-num{
+        position: absolute;
+        top: 0;left: 0;
+        z-index: -1;
+        font:{
+            family:'Righteous', cursive;
+            size:15em;
+        };
+        color:#e9e9e9 ;
+    }
+    .list-img,.list-text{
+        position: relative;
+        z-index: 1;
+    }
+    .list-img{
+        margin-top: 30%;
+        img{
+            width: 100%;
+        }
+    }
+    &:nth-child(2n){
+        margin-top: 30%;
+        .list-num{
+            left:auto;right: 0;
+        }
+    }
+    &:nth-child(3){
+        .list-num{
+            left:auto;right: 0;
+        }
+    }
+    &:nth-child(6){
+        .list-num{
+            left:0;right:auto;
+        }
+    }
+}

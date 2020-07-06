@@ -1,0 +1,9 @@
+body{
+    /* 영문 */
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Fugaz One', cursive;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'Righteous', cursive;
+    /* 한글 */
+    font-family: 'Noto Sans KR', sans-serif;
+}

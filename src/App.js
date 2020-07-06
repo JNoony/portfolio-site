@@ -8,17 +8,19 @@ export default function App(){
         <header>
             <div className="head">
                 <h1 className="head-logo">
-                    <img src="#"/>
+                    <img src="/img/logo.svg"/>
                 </h1>
             </div>
         </header>
-        <main>
+        <main className="container">
             <div className="bg-border row">
-                <div className="col"></div>
-                <div className="col"></div>
-                <div className="col"></div>
-                <div className="col"></div>
-                <div className="col"></div>
+                <div className="bg-border-back col-1"></div>
+                <div className="bg-border-back col-2"></div>
+                <div className="bg-border-back col-3"></div>
+                <div className="bg-border-back col-3"></div>
+                <div className="bg-border-back col-2"></div>
+                <div className="bg-border-back col-1"></div>
+                <div className="bg-border-text"></div>
             </div>
 
             <section className="visual">
@@ -33,7 +35,7 @@ export default function App(){
             <section className="section-list">
                 <h2 className="con-tit">work<br/>experience</h2>
                 <div className="con-box row">
-                    <List />
+                    <List class={''}/>
                 </div>
             </section>
         </main>

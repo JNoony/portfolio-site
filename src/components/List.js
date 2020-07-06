@@ -9,7 +9,7 @@ const listData = Array.from(
     })
 )
 
-export default function List(){
+export default function List(prop){
     return(<>
         {listData.map((con) =>(
             <Card  num={con.num} key={con.num}
@@ -19,7 +19,8 @@ export default function List(){
                    label={con.label}
                    href={con.href}
                    class={con.class}
-                   btnName={con.btnName} />
+                   btnName={con.btnName} 
+                   divClass={prop.class}/>
         ))}
     </>)
 }
