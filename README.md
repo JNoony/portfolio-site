@@ -1,3 +1,3 @@
 ing
 
-[site] https://jnoony.github.io/portfolio-site/
+[site(https://jnoony.github.io/portfolio-site/)]
