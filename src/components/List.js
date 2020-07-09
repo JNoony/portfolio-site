@@ -17,10 +17,11 @@ export default function List(prop){
                    imgName={con.imgName}
                    title={con.title}
                    label={con.label}
-                   href={con.href}
-                   class={con.class}
-                   btnName={con.btnName} 
-                   divClass={prop.class}/>
+                   button={con.button}
+                //    href={con.href}
+                //    class={con.class}
+                //    btnName={con.btnName} 
+                   divClass={con.divClass}/>
         ))}
     </>)
 }

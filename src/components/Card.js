@@ -11,9 +11,10 @@ export default function Card(props){
                 <p className="list-text-tit">{props.title}</p>
                 <p className="list-text-label">{props.label}</p>
                 <p className="list-text-link">
-                    <a href={props.href} className={props.class} target="_blank">
+                    {props.button}
+                    {/* <a href={props.href} className={props.class} target="_blank">
                         {props.btnName}
-                    </a>
+                    </a> */}
                  </p>
             </div>
         </div>

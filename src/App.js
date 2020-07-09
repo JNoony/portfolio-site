@@ -1,43 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
-import List from './components/List';
+// import NotFound from './NotFound';
+import Main from './page/Main';
 
 export default function App(){
     return(<>
-        <header>
-            <div className="head">
-                <h1 className="head-logo">
-                    <img src="/img/logo.svg"/>
-                </h1>
-            </div>
-        </header>
-        <main className="container">
-            <div className="bg-border row">
-                <div className="bg-border-back col-1"></div>
-                <div className="bg-border-back col-2"></div>
-                <div className="bg-border-back col-3"></div>
-                <div className="bg-border-back col-3"></div>
-                <div className="bg-border-back col-2"></div>
-                <div className="bg-border-back col-1"></div>
-                <div className="bg-border-text"></div>
-            </div>
+       <Switch>
+            <Route path="/" exact component={Main} />
+            {/* <Route path="/sub" component={sub}/>  */}
 
-            <section className="visual">
-                <h2 className="visual-txt">
-                    <strong className="visual-txt-style">markup<br/>developer</strong>
-                    <span className="visual-txt-style text">web<br/>publisher</span>
-                </h2>
-                <p className="visual-title">portfolio</p>
-                <small>career description</small>
-            </section>
-
-            <section className="section-list">
-                <h2 className="con-tit">work<br/>experience</h2>
-                <div className="con-box row">
-                    <List class={''}/>
-                </div>
-            </section>
-        </main>
+            {/* <Route component={NotFound} /> */}
+        </Switch>
     </>)
 }
