@@ -26,6 +26,6 @@
 .con-box-list:nth-child(2n) { margin-top: 30%; }
 .con-box-list:nth-child(2n) .list-num { left: auto; right: 0; }
 .con-box-list:nth-child(3) .list-num { left: auto; right: 0; }
-.con-box-list:nth-child(6) .list-num { left: 0; right: auto; }
+.con-box-list:nth-child(6) .list-num { left: 0; right: auto;}
 
 /*# sourceMappingURL=layout.css.map */
