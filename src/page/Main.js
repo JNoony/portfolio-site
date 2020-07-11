@@ -8,7 +8,7 @@ export default function Main(){
          <header>
             <div className="head">
                 <h1 className="head-logo">
-                    <img src="/img/logo.svg" alt="로고이미지"/>
+                    <img src={`${process.env.PUBLIC_URL}/img/logo.svg`} alt="로고이미지"/>
                 </h1>
             </div>
         </header>
