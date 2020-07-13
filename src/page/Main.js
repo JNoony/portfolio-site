@@ -5,19 +5,22 @@ import Header from '../components/Header';
 import List from '../components/List';
 
 export default function Main(){
-    const [height,setHeight] = useState(0);
-
+    const [height,setHeight] = useState([0]);
+    const arr = []
+    
     useEffect(() => {
         const section = document.querySelectorAll('.scroll-section' );
         for(let i=0;i<section.length;i++){
-            section[i].offsetHeight
+            setHeight( section[i].offsetHeight );
         }
-        setHeight(document.querySelector('#scroll-section-0').offsetHeight)
+        // setHeight(document.querySelector('#scroll-section-0').offsetHeight)
+        console.log(section.length)
+        console.log(height)
+        console.log(arr)
     },[])
-
-    const style = {
-        height:height
-    }
+    
+    
+    
     return(<>
         <Header /> 
         <main className="container">
@@ -31,7 +34,7 @@ export default function Main(){
                 <div className="bg-border-text"></div>
             </div>
 
-            <section className="visual scroll-section" id="scroll-section-0" style={style}>
+            <section className="visual scroll-section" id="scroll-section-0">
                 <h2 className="visual-txt">안녕하세요<br/>저는</h2>
                 <div className="sticky-elem main-message a">
                     <strong>마크업 개발자<br/>markup developer</strong>
