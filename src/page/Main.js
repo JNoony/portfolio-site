@@ -8,6 +8,10 @@ export default function Main(){
     const [height,setHeight] = useState(0);
 
     useEffect(() => {
+        const section = document.querySelectorAll('.scroll-section' );
+        for(let i=0;i<section.length;i++){
+            section[i].offsetHeight
+        }
         setHeight(document.querySelector('#scroll-section-0').offsetHeight)
     },[])
 
