@@ -1,4 +1,4 @@
-ing
+사이트 개발중입니다....
 
-site = https://jnoony.github.io/portfolio-site/    <br/>
-https://jnoony-portfolio-site.netlify.app/
+
+[portfolio site] https://jnoony-portfolio-site.netlify.app/
