@@ -2,10 +2,11 @@ import React,{useState,useEffect,useRef } from 'react';
 import ReactDOM from 'react-dom';
 
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import List from '../components/List';
 
 export default function Main(){
-    const [height,setHeight] = useState([0]);
+    const [height, setHeight] = useState([0]);
     const arr = []
     
     useEffect(() => {
@@ -54,10 +55,13 @@ export default function Main(){
 
             <section className="section-list scroll-section" id="scroll-section-1" >
                 <h2 className="con-tit">work<br/>experience</h2>
+                <div className="line-bar"></div>
                 <div className="con-box row">
                     <List class={''}/>
                 </div>
+                <p className="con-tit">work<br/>continues</p>
             </section>
         </main>
+        <Footer />
     </>)
 }
