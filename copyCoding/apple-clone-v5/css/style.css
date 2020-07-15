@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+html{
+    font-family:'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+body{
+    overflow-x: hidden;
+    color: rgb(29,29,31);
+    letter-spacing: -.05em;
+    background: #fff;
+}
+p{
+    line-height: 1.6;
+}
+a{
+    color: rgb(29,29,31);
+    text-decoration: none;
+}
+
+
+/* 본격 스타일시트 */
+.global-nav{
+    height: 44px;
+}
+.local-nav{
+    height: 52px;
+    border-bottom: 1px solid #ddd;
+}
+.global-nav-links,
+.local-nav-links{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 1000px;
+    margin:0 auto;
+}
+.global-nav-links{
+    justify-content: space-between;
+}
+.local-nav-links .pro-name{
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.local-nav-links a:not(.pro-name){
+    margin-left: 2em;
+    font-size: .8rem;
+}
+
+
+/* section ::: scroll */
+.scroll-section{
+    padding-top:50vh;
+}
+#scroll-section-0{
+    font-size: 4rem;
+    text-align: center;
+}
+.main-message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 3em;
+    font-size: 2.5rem;
+    background: #eee;
+}
+.main-message p{
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+}
+.main-message small{
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: .5em;
+}
+#scroll-section-2 .main-message small{
+    font-size: 3.5rem;
+}
+
+
+.description{
+    max-width: 1000px;
+    margin:0 auto;
+    font-size: 1.2rem;
+    color: #888;
+}
+.description strong{
+    float: left;
+    margin-right: .2em;
+    font-size: 3rem;
+    color: rgb(29,29,31);
+}
+
+.desc-message{
+    font-weight: bold;
+    width: 50%;
+}
+.pin{
+    width: 1px;
+    height: 100px;
+    background: rgb(29,29,31);
+}
+
+.mid-message{
+    max-width: 1000px;
+    margin:0 auto;
+    font-size: 2rem;
+    padding: 0 1em;
+    color: #888;
+}
+.mid-message strong{
+    background: rgb(29,29,31);
+}
+
+.canvas-caption{
+    max-width: 1000px;
+    margin:0 auto;
+    padding: 0 1em;
+    color: #888;
+    font-size: 1.2rem;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    background: darkgoldenrod;
+}
+
+
+.sticky-elem{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem{
+    display: block;
+}
+
+
+@media screen and (min-width:1024px){
+    #scroll-section-0 h1{
+        font-size: 9vw;
+    }
+    .main-message {
+        font-size: 4vw;
+    }
+
+    .description{
+        font-size: 2rem;
+    }
+    .description strong{
+        font-size: 6rem;
+    }
+
+    #scroll-section-2 .main-message{
+        font-size: 6vw;
+    }
+
+    .main-message small{
+        font-size: 1.5vw;
+    }
+    .desc-message{
+        width: 20%;
+    }
+
+    .mid-message{
+        font-size: 4vw;
+    }
+    .canvas-caption{
+        font-size: 2rem;
+    }
+}

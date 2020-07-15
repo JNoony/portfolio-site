@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+
+.scroll-section { padding-top: 20vh; }
+.scroll-section.visual { font-family: 'Sunflower', sans-serif; }
+.scroll-section h2 { 
+    font-size: 7rem; 
+    text-align: center; 
+}
+.scroll-section .main-message { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 3rem; 
+    text-transform: capitalize; 
+    line-height: 1.4; 
+}
+.scroll-section .main-message strong { 
+    text-align: center; 
+    display: block; 
+}
+.scroll-section .sticky-elem { 
+    position: fixed; 
+    top: 0; left: 0; right: 0; bottom: 0; 
+    display: none; 
+}
+.scroll-section .visual-title { 
+    text-align: center; 
+    font-size: 2rem; 
+    color: #b8caec;
+}
+.visual-title+small{
+    display: block;
+    text-align: center;
+    margin-top: 15%;
+    color: #cecece;
+    text-transform: uppercase;
+    letter-spacing: 1.2em;
+}
+
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem { display: block; }
+
+
+h2.con-tit, p.con-tit{
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+    text-transform: capitalize;
+}
+.section-list{position: relative;}
+.line-bar{
+    position: absolute;
+    top:25vh;left: 0;right: 0;bottom: 0;
+    margin: 0 auto;
+    width: 2px;height: 100%;
+    background: #b8caec;
+    z-index: -1;
+}
+
+
+
+.section-about{
+    text-align: center;
+    font-size: 1rem;
+    color: #a0a0a0;
+    line-height: 1.4;
+    position: relative;
+}
+.section-about h2{
+    font-size: 1.667rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: #111;
+    margin-bottom: 1%;
+}
+.section-about .box-sns{
+    padding-top: 10%;
+}
+.section-about .line-bar{
+    height: 15%;
+    top: auto;
+    bottom: 12%;
+}
+
+
+
+
+
+
+@media screen and (max-width:600px){
+    .scroll-section h2{
+        font-size: 17vw;
+    }
+    .visual-title+small{
+        font-size: 2vw;
+    }
+
+    h2.con-tit, p.con-tit{ 
+        font-size: 3vw;
+    }
+    
+    .section-about h2{
+        font-size: 5vw;
+    }
+    .section-about h2+p{
+        font-size: 3vw;
+    }
+    .section-about .box-sns{
+        padding-top: 30%;
+    }
+
+    .foot .copy{
+        font-size: .7em;
+    }
+}

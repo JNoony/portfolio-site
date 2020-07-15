@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+    <!-- text:: google web font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <title>Markup Developer</title>
+</head>
+<body>
+    <div class="wrap">
+        <!-- head -->
+        <header class="header">
+            <div class="head max-width">
+                <h1 class="logo">logo</h1>
+            </div>
+        </header>
+
+        <!-- 본문 -->
+        <main class="container">
+            <div class="bg-border row">
+                <div class="bg-border-back col-1"></div>
+                <div class="bg-border-back col-2"></div>
+                <div class="bg-border-back col-3"></div>
+                <div class="bg-border-back col-3"></div>
+                <div class="bg-border-back col-2"></div>
+                <div class="bg-border-back col-1"></div>
+                <div class="bg-border-text"></div>
+            </div>
+
+            <section class="visual scroll-section max-width" id="scroll-section-0">
+                <h2 class="visual-txt">안녕하세요<br/>저는</h2>
+                <div class="sticky-elem main-message a">
+                    <strong>마크업 개발자<br/>markup developer</strong>
+                </div>
+                <div class="sticky-elem main-message b">
+                    <strong>또는</strong>
+                </div>
+                <div class="sticky-elem main-message c">
+                    <strong>웹 퍼블리셔<br/>web publisher</strong>
+                </div>
+                <div class="sticky-elem main-message d">
+                    <strong>한민지 입니다.</strong>
+                </div>
+                <p class="visual-title">portfolio</p>
+                <small>career description</small>
+            </section>
+
+            <section class="section-list scroll-section " id="scroll-section-1" >
+                <h2 class="con-tit">work<br/>experience</h2>
+                <div class="line-bar"></div>
+                <div class="con-box row max-width" id="boxList">
+                    <!-- list -->
+                </div>
+                <p class="con-tit">work<br/>continues</p>
+            </section>
+
+            <section class="section-about scroll-section " id="scroll-section-2">
+                <h2>han minji<br/>한민지</h2>
+                <p>2020년 현재 4년차 마크업개발자[웹 퍼블리셔]로<br/>
+                    활동하고 있습니다</p>
+                <div class="line-bar"></div>
+                <div class="box-sns">
+                    <a href="#" title="email">email</a>
+                    <a href="#" title="github">github</a>
+                    <a href="#" title="linkedin">linkedin</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="foot">
+            <p class="copy">ⓒ2020 hanminji. all rights reserved.</p>
+        </footer>
+    </div>
+
+    
+    <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> -->
+
+    <script src="./js/boxList.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
