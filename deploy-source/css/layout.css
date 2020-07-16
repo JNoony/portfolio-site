@@ -43,7 +43,7 @@ html, body{
 }
 .con-box-list .list-num { 
     position: absolute; 
-    top: -20px; left: 0; 
+    top: 0; left: 0; 
     z-index: -1; 
     font-family: 'Bungee Outline', cursive; 
     font-size: 15em; 
@@ -81,7 +81,7 @@ html, body{
 
 
 /* footer */
-.foot{ padding:5% 0; }
+.foot{ padding:8% 0 5%; }
 .foot .copy{
     text-align: center;
     color: #888;

@@ -14,6 +14,7 @@
     font-size: 3rem; 
     text-transform: capitalize; 
     line-height: 1.4; 
+    opacity: 0;
 }
 .scroll-section .main-message strong { 
     text-align: center; 
@@ -21,13 +22,17 @@
 }
 .scroll-section .sticky-elem { 
     position: fixed; 
-    top: 0; left: 0; right: 0; bottom: 0; 
+    left: 0;  
+    width: 100%;
     display: none; 
 }
 .scroll-section .visual-title { 
     text-align: center; 
     font-size: 2rem; 
     color: #b8caec;
+    margin-top: 5%;
+    letter-spacing: .1em;
+    font-weight: 100;
 }
 .visual-title+small{
     display: block;
@@ -35,7 +40,7 @@
     margin-top: 15%;
     color: #cecece;
     text-transform: uppercase;
-    letter-spacing: 1.2em;
+    letter-spacing: 1.5em;
 }
 
 #show-scene-0 #scroll-section-0 .sticky-elem,
@@ -49,24 +54,41 @@ h2.con-tit, p.con-tit{
     text-align: center;
     text-transform: capitalize;
 }
+p.con-tit{padding-top:12%;}
 .section-list{position: relative;}
 .line-bar{
     position: absolute;
     top:25vh;left: 0;right: 0;bottom: 0;
     margin: 0 auto;
-    width: 2px;height: 100%;
+    width: 2px;height: 90%;
     background: #b8caec;
     z-index: -1;
 }
 
+/* 리스트 */
+.list-text-label span{
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #9ea8bd;
+    margin: 2px;
+    font-size: .8rem;
+    color: #fff;
+}
+
+.btn-defalut{
+
+}
 
 
+/* 마지막 페이지 */
 .section-about{
     text-align: center;
     font-size: 1rem;
     color: #a0a0a0;
     line-height: 1.4;
     position: relative;
+    padding-top: 25vh;
 }
 .section-about h2{
     font-size: 1.667rem;
@@ -76,12 +98,12 @@ h2.con-tit, p.con-tit{
     margin-bottom: 1%;
 }
 .section-about .box-sns{
-    padding-top: 10%;
+    padding-top: 13%;
 }
 .section-about .line-bar{
     height: 15%;
     top: auto;
-    bottom: 12%;
+    bottom: 14%;
 }
 
 

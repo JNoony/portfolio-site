@@ -1,24 +1,22 @@
-const data = [
+const listData = [
     {   num:"01", 
         divClass:'type1',
         imgName:"모비커넥트", 
-        imgSrc:"/images/box_img01.png",
+        imgSrc:"./images/box_img01.png",
         title:"mobiconnect",
-        // label:<>
-        // <span>#UI/UX 리뉴얼 디자인</span>
-        // <span>#HTML5</span><span>#CSS3</span><span>#SASS/SCSS</span>
-        // <span>#javascript</span><span>#jQuery</span><span>#JSTL</span>
-        // </>,
-        button:<a href="#" class="">Read more</a> 
+        label:`<span>#UI/UX 리뉴얼 디자인</span>
+        <span>#HTML5</span><span>#CSS3</span><span>#SASS/SCSS</span>
+        <span>#javascript</span><span>#jQuery</span><span>#JSTL</span>`,
+        href:"",
+        class:"btn-defalut disable",
+        btnName:"Read more" 
     },
     {   num:"02", 
         divClass:'type1',
         imgName:"모비인터치", 
-        imgSrc:"/images/box_img02.png",
+        imgSrc:"./images/box_img02.png",
         title:"mobintouch",
-        // label:<>
-        // <span>#HTML5</span><span>#CSS3</span><span>#javascript</span><span>#ReactJS</span>
-        // </>,
+        label:`<span>#HTML5</span><span>#CSS3</span><span>#javascript</span><span>#ReactJS</span>`,
         href:"https://mobintouch.co.kr/",
         class:"btn-defalut",
         btnName:"Read more" 
@@ -26,11 +24,10 @@ const data = [
     {   num:"03", 
         divClass:'type1',
         imgName:"맥스더크리에이티브 2nd", 
-        imgSrc:"/images/box_img03.png",
+        imgSrc:"./images/box_img03.png",
         title:"maxthecreative 2nd",
-        label:
-        <span>#HTML5</span><span>#CSS3</span><span>#javascript</span>
-        <span>#Material-ui</span><span>#ReactJS</span>,
+        label:`<span>#HTML5</span><span>#CSS3</span><span>#javascript</span>
+        <span>#Material-ui</span><span>#ReactJS</span>`,
         href:"https://maxthecreative.co/",
         class:"btn-defalut",
         btnName:"Read more" 
@@ -38,9 +35,9 @@ const data = [
     {   num:"04", 
         divClass:'type1',
         imgName:"맥스서밋 2019", 
-        imgSrc:"/images/box_img04.png",
+        imgSrc:"./images/box_img04.png",
         title:"maxsummit 2019",
-        label:<span>#HTML5</span><span>#CSS3</span><span>#javascript</span><span>#jQuery</span>,
+        label:`<span>#HTML5</span><span>#CSS3</span><span>#javascript</span><span>#jQuery</span>`,
         href:"https://maxsummit.co/2019/",
         class:"btn-defalut",
         btnName:"Read more" 
@@ -48,9 +45,10 @@ const data = [
     {   num:"05", 
         divClass:'type1',
         imgName:"브랜드사이트-열렙전사 사전예약", 
-        imgSrc:"/images/box_img05.png",
+        imgSrc:"./images/box_img05.png",
         title:"브랜드 사이트",
-        label: <span>#HTML5</span><span>#CSS3</span><span>#javascript</span><span>#jQuery</span>,
+        label:`<span>#HTML5</span><span>#CSS3</span><span>#javascript</span>
+        <span>#jQuery</span>`,
         href:"",
         class:"btn-defalut",
         btnName:"Read more" 
@@ -58,54 +56,72 @@ const data = [
     {   num:"06",
         divClass:'type1', 
         imgName:"퍼틀 앱/웹", 
-        imgSrc:"/images/box_img06.png",
+        imgSrc:"./images/box_img06.png",
         title:"fertile app/web",
-        label:
-        <span>#UI/UX 디자인</span>
-        <span>#HTML5</span><span>#CSS3</span><span>#javascript</span><span>#jQuery</span>,
+        label:`<span>#UI/UX 디자인</span><span>#HTML5</span><span>#CSS3</span>
+        <span>#javascript</span><span>#jQuery</span>`,
         href:"http://fertile.co.kr/",
         class:"btn-defalut",
-        btnName:"Read more" },   
+        btnName:"Read more" 
+    },   
 ]
+// const data = JSON.stringify(listData)
+// console.log(data)
+// const labelStyle = (){
 
-const List = ()=>{
-  listData.map((con) =>(
-    `<h3 class="list-num">${con.num}</h3>
-    <div class="list-img">
-        <img src="${con.imgSrc}" alt="${con.imgName}" />
-    </div>
-    <div class="list-text">
-        <p class="list-text-tit">${con.title}</p>
-        <p class="list-text-label">${con.label}</p>
-        <p class="list-text-link">
-            <a href="${con.href}" target="_blank">${con.btnName}</a>
-        </p>
-    </div>`
-  ))
+// }
+
+// const removeComma = (srt)=>{
+//     comma = parseInt(str.replace(/,/g,""));
+//     return comma;
+// }
+
+const List = ()=>{ 
+    let div = '';
+    // div = listData.map((con) =>(  
+    //    `<div class="con-box-list">
+    //         <h3 class="list-num">${con.num}</h3>
+    //         <div class="list-img">
+    //             <img src="${con.imgSrc}" alt="${con.imgName}" />
+    //         </div>
+    //         <div class="list-text">
+    //             <p class="list-text-tit">${con.title}</p>
+    //             <p class="list-text-label">${con.label}</p>
+    //             <p class="list-text-link">
+    //                 <a href="${con.href}" target="_blank"
+    //                 class="${con.class}">${con.btnName}</a>
+    //             </p>
+    //         </div>
+    //    </div>`
+    // ));
+    for(var i=0;i<listData.length;i++){
+        div += `<div class="con-box-list">
+            <h3 class="list-num">${listData[i].num}</h3>
+            <div class="list-img">
+                <img src="${listData[i].imgSrc}" alt="${listData[i].imgName}" />
+            </div>
+            <div class="list-text">
+                <p class="list-text-tit">${listData[i].title}</p>
+                <p class="list-text-label">${listData[i].label}</p>
+                <p class="list-text-link">
+                    <a href="${listData[i].href}" target="_blank"
+                    class="${listData[i].class}">${listData[i].btnName}</a>
+                </p>
+            </div>
+        </div>`;
+    }
+    return div;
 }
 
-function init(){
-  let div = document.createElement('div');
-  div.classList.add('con-box-list');
-  div.innerHTML = List();
-  // div.innerHTML = `
-  // <h3 class="list-num">{props.num}</h3>
-  // <div class="list-img">
-  //   <img src={props.imgSrc} alt={props.imgName} />
-  // </div>
-  // <div class="list-text">
-  //   <p class="list-text-tit">{props.title}</p>
-  //   <p class="list-text-label">{props.label}</p>
-  //   <p class="list-text-link">
-  //       {props.button}
-  //   </p>
-  // </div>`
-  return div;
-}
+// function init(){
+//     const boxDOM = document.querySelector('#boxList');
+//     boxDOM.innerHTML = List();
+// }
 
 (()=>{
+
   const boxDOM = document.querySelector('#boxList');
-  // boxDOM.appendChild(init());
-  boxDOM.innerHTML = init();
+  boxDOM.innerHTML = List();
+
 })()
 
