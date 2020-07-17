@@ -2,10 +2,11 @@
 
 
 .scroll-section { padding-top: 20vh; }
-.scroll-section.visual { font-family: 'Sunflower', sans-serif; }
+.scroll-section.visual h2,
+.scroll-section.visual .main-message{ font-family: 'Sunflower', sans-serif; }
 .scroll-section h2 { 
     font-size: 7rem; 
-    text-align: center; 
+    text-align: center;
 }
 .scroll-section .main-message { 
     display: flex; 
@@ -19,14 +20,22 @@
 .scroll-section .main-message strong { 
     text-align: center; 
     display: block; 
+    font-size: 5rem; 
 }
 .scroll-section .sticky-elem { 
     position: fixed; 
     left: 0;  
+    top: 20vh;
     width: 100%;
     display: none; 
 }
-.scroll-section .visual-title { 
+
+
+.fix-text{
+    position: fixed;
+    bottom: 23vh;left: 0;right: 0;
+}
+.fix-text .visual-title { 
     text-align: center; 
     font-size: 2rem; 
     color: #b8caec;
@@ -34,38 +43,50 @@
     letter-spacing: .1em;
     font-weight: 100;
 }
-.visual-title+small{
+.fix-text .visual-title+small{
     display: block;
     text-align: center;
-    margin-top: 15%;
+    margin-top: 9%;
     color: #cecece;
     text-transform: uppercase;
     letter-spacing: 1.5em;
 }
+
 
 #show-scene-0 #scroll-section-0 .sticky-elem,
 #show-scene-1 #scroll-section-1 .sticky-elem,
 #show-scene-2 #scroll-section-2 .sticky-elem { display: block; }
 
 
-h2.con-tit, p.con-tit{
+
+
+
+
+.section-list h2.con-tit, 
+.section-list p.con-tit{
     font-size: 1rem;
     font-weight: 100;
     text-align: center;
     text-transform: capitalize;
 }
-p.con-tit{padding-top:12%;}
-.section-list{position: relative;}
+/* p.con-tit{padding-top:12%;} */
+.section-list{
+    position: relative;
+    padding-top: 0;;
+    /* background: red; */
+}
 .line-bar{
     position: absolute;
-    top:25vh;left: 0;right: 0;bottom: 0;
+    top:5vh;left: 0;right: 0;bottom: 0;
     margin: 0 auto;
-    width: 2px;height: 90%;
+    width: 2px;
+    height: 97%;
     background: #b8caec;
     z-index: -1;
 }
 
 /* 리스트 */
+.section-list .con-box{ padding: 8% 0 12%; }
 .list-text-label span{
     display: inline-block;
     padding: 5px 10px;
@@ -88,7 +109,7 @@ p.con-tit{padding-top:12%;}
     color: #a0a0a0;
     line-height: 1.4;
     position: relative;
-    padding-top: 25vh;
+    /* padding-top: 25vh; */
 }
 .section-about h2{
     font-size: 1.667rem;
