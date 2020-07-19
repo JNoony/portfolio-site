@@ -95,7 +95,10 @@
 }
 
 /* 리스트 */
-.section-list .con-box{ padding: 8% 0 12%; }
+.section-list .con-box{ 
+    padding: 8% 0 12%; 
+    box-sizing: border-box;
+}
 .list-text-tit{
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -142,8 +145,8 @@
 }
 
 .list-text-link .disable{
-    border-color: #999;
-    background: #ccc;
+    border-color: #d8d5d5;
+    background: #ddd;
     color: #999;
     pointer-events: none;
 }
@@ -170,20 +173,19 @@
 }
 .section-about .box-sns a{
     display: inline-block;
-    height: 50px;width: 50px;
+    height: 38px;width: 38px;
     vertical-align: middle;
-    background-size: 90%;
-    background-position: center;
+    background: url(../images/icon.png) no-repeat;
     text-indent: -9999px;
 }
-.icon-sns-email{
-    background: url(../images/icon-01.svg) no-repeat;
+.section-about .box-sns .icon-sns-email{
+    background-position: 0 center;
 }
-.icon-sns-git{
-    background: url(../images/icon-02.svg) no-repeat;
+.section-about .box-sns .icon-sns-git{
+    background-position: 50% center;
 }
-.icon-sns-in{
-    background: url(../images/icon-03.svg) no-repeat;
+.section-about .box-sns .icon-sns-in{
+    background-position: 100% center;
 }
 
 .section-about .line-bar{
@@ -198,6 +200,10 @@
 
 
 @media screen and (max-width:600px){
+    .head {
+        padding:2%;
+        box-sizing: border-box;
+    }
     .max-width{
         max-width: 100vw;
         overflow: auto;
@@ -222,8 +228,21 @@
     }
 
     /* 리스트 */
+    /* .section-list .con-box{
+        box-sizing: border-box;
+    } */
     .con-box-list .list-num{
         font-size: 20vw;
+    }
+    .list-text-tit{
+        font-size: 4.5vw;
+        letter-spacing: -.05em;
+    }
+    .list-text-label{width: 100%;}
+    .list-text-link .btn-defalut{ 
+        padding: .7em 1.5em; 
+        font-size: 3vw;
+        margin-top: 1rem;
     }
 
 

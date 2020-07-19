@@ -166,7 +166,10 @@
         if( currentScene !== 0 ){
             document.querySelector('#scroll-section-0 .fix-text').style.opacity = 0;
         }
+    }
 
+    //페이지 상관없이 스크롤 높이로 애니메이션 실행하게 하기
+    function listAni(){
         // //2p
         let winY = yOffset;
         const mainPage = document.querySelector('#scroll-section-0').offsetHeight;
@@ -175,17 +178,17 @@
         const end = mainPage + listHeight;
         let lineBar = document.querySelector('#scroll-section-1 .line-bar');
         
-        // if( winY >= start){
-        //     // lineBar.style.height = `${}`
-        //     console.log( winY )
-        // }
+        if( winY >= start){
+            winY=0;
+            winY = window.pageYOffset;
+            // lineBar.style.height = `${}`
+            console.log( winY )
+        }
 
         console.log( '2p winY : ', winY )
         console.log( '2p mainPage : ', mainPage )
         console.log( '2p listHeight : ', listHeight )
         console.log( '2p start, end : ', start, end )
-        console.log(curYOffset)
-
     }
 
     
@@ -215,6 +218,7 @@
     window.addEventListener('scroll',()=>{
         yOffset = window.pageYOffset;
         scrollLoop();
+        listAni();
     })
     // window.addEventListener('DOMContentLoaded',setLayout) //html DOM만 보이면처리
     window.addEventListener('load',setLayout) 
