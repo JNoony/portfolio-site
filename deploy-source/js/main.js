@@ -120,8 +120,6 @@
         const curYOffset = yOffset - prevScrollHeight;
         const scrollHeight = sceneInfo[currentScene].scrollHeight ;//현재 씬의 scrollHeight
         const scrollRatio = curYOffset / scrollHeight;
-        console.log( 'curYOffset : ',curYOffset )
-        console.log( 'scrollRatio : ',scrollRatio )
         
         if( currentScene === 0 ){
             document.querySelector('#scroll-section-0 .fix-text').style.opacity = 1;
@@ -169,59 +167,25 @@
             document.querySelector('#scroll-section-0 .fix-text').style.opacity = 0;
         }
 
-        if( currentScene === 1 ){
-            // if(scrollRatio > 0.1){
-            //     obj.bar.style.height = `${calcVal(val.barHeight_in, curYOffset)}%`;
-            // }else{
-            //     obj.bar.style.height = `${calcVal(val.barHeight_out, curYOffset)}%`;
-            // }
-            
-        }
+        // //2p
+        let winY = yOffset;
+        const mainPage = document.querySelector('#scroll-section-0').offsetHeight;
+        const listHeight = document.querySelector('#boxList').offsetHeight;
+        const start = mainPage - 760;
+        const end = mainPage + listHeight;
+        let lineBar = document.querySelector('#scroll-section-1 .line-bar');
         
-        // switch( currentScene ){
-        //     case 0:
-        //         if(scrollRatio <= 0.22){
-        //             obj.messageA.style.opacity = calcVal(val.messageA_opacity_in, curYOffset);
-        //             obj.messageA.style.transform = `translateY(${calcVal(val.messageA_translateY_in, curYOffset)}%)`;
-        //         }else{
-        //             obj.messageA.style.opacity = calcVal(val.messageA_opacity_out, curYOffset);
-        //             obj.messageA.style.transform = `translateY(${calcVal(val.messageA_translateY_out, curYOffset)}%)`;
-        //         }
-
-        //         if(scrollRatio <= 0.42){
-        //             obj.messageB.style.opacity = calcVal(val.messageB_opacity_in, curYOffset);
-        //             obj.messageB.style.transform = `translateY(${calcVal(val.messageB_translateY_in, curYOffset)}%)`;
-        //         }else{
-        //             obj.messageB.style.opacity = calcVal(val.messageB_opacity_out, curYOffset);
-        //             obj.messageB.style.transform = `translateY(${calcVal(val.messageB_translateY_out, curYOffset)}%)`;
-        //         }
-
-        //         if(scrollRatio <= 0.62){
-        //             obj.messageC.style.opacity = calcVal(val.messageC_opacity_in, curYOffset);
-        //             obj.messageC.style.transform = `translateY(${calcVal(val.messageC_translateY_in, curYOffset)}%)`;
-        //         }else{
-        //             obj.messageC.style.opacity = calcVal(val.messageC_opacity_out, curYOffset);
-        //             obj.messageC.style.transform = `translateY(${calcVal(val.messageC_translateY_out, curYOffset)}%)`;
-        //         }
-
-        //         if(scrollRatio <= 0.82){
-        //             obj.messageD.style.opacity = calcVal(val.messageD_opacity_in, curYOffset);
-        //             obj.messageD.style.transform = `translateY(${calcVal(val.messageD_translateY_in, curYOffset)}%)`;
-        //         }else{
-        //             obj.messageD.style.opacity = calcVal(val.messageD_opacity_out, curYOffset);
-        //             obj.messageD.style.transform = `translateY(${calcVal(val.messageD_translateY_out, curYOffset)}%)`;
-
-
-        //         }
-        //         break;
-
-        //     case 1:
-        //         break;
-        //     case 2:
-        //         break;
-        //     case 3:
-        //         break;
+        // if( winY >= start){
+        //     // lineBar.style.height = `${}`
+        //     console.log( winY )
         // }
+
+        console.log( '2p winY : ', winY )
+        console.log( '2p mainPage : ', mainPage )
+        console.log( '2p listHeight : ', listHeight )
+        console.log( '2p start, end : ', start, end )
+        console.log(curYOffset)
+
     }
 
     
@@ -245,8 +209,7 @@
         }
 
         if( enterNewScene ) return;
-        playAnimation()
-        console.log( currentScene )
+        playAnimation();
     }
 
     window.addEventListener('scroll',()=>{

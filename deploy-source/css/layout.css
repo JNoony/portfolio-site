@@ -62,10 +62,6 @@ html, body{
 .con-box-list:nth-child(3) .list-num { left: auto; right: 0; }
 .con-box-list:nth-child(6) .list-num { left: 0; right: auto; }
 
-.max-width{
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 
 /* header */
@@ -76,7 +72,7 @@ html, body{
 }
 .head .logo{
     text-indent: -999px;
-    background: url(../images/logo.svg) no-repeat 0 center;
+    background: url(../images/logo.png) no-repeat 0 center;
 }
 
 
@@ -86,3 +82,4 @@ html, body{
     text-align: center;
     color: #888;
 }
+

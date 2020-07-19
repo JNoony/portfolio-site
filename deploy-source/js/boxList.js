@@ -9,7 +9,7 @@ const listData = [
         <span>#javascript</span><span>#jQuery</span><span>#JSTL</span>`,
         href:"",
         class:"btn-defalut disable",
-        btnName:"Read more" 
+        btnName:"데모 준비중" 
     },
     {   num:"02", 
         divClass:'type1',
@@ -34,11 +34,11 @@ const listData = [
     },
     {   num:"04", 
         divClass:'type1',
-        imgName:"맥스서밋 2019", 
+        imgName:"맥스서밋 2020/2019", 
         imgSrc:"./images/box_img04.png",
         title:"maxsummit 2019",
         label:`<span>#HTML5</span><span>#CSS3</span><span>#javascript</span><span>#jQuery</span>`,
-        href:"https://maxsummit.co/2019/",
+        href:"https://maxsummit.co",
         class:"btn-defalut",
         btnName:"Read more" 
     },
@@ -50,8 +50,8 @@ const listData = [
         label:`<span>#HTML5</span><span>#CSS3</span><span>#javascript</span>
         <span>#jQuery</span>`,
         href:"",
-        class:"btn-defalut",
-        btnName:"Read more" 
+        class:"btn-defalut disable",
+        btnName:"데모 준비중" 
     },
     {   num:"06",
         divClass:'type1', 
@@ -61,8 +61,8 @@ const listData = [
         label:`<span>#UI/UX 디자인</span><span>#HTML5</span><span>#CSS3</span>
         <span>#javascript</span><span>#jQuery</span>`,
         href:"http://fertile.co.kr/",
-        class:"btn-defalut",
-        btnName:"Read more" 
+        class:"btn-defalut disable",
+        btnName:"데모 준비중" 
     },   
 ]
 // const data = JSON.stringify(listData)
