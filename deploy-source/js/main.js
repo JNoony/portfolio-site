@@ -215,13 +215,32 @@
         playAnimation();
     }
 
+    // //top
+    // function topBtn(){
+    //     const top = document.querySelector('html, body');
+    //     const div = document.createElement('div');
+    //     div.className = 'btn-top'; 
+    //     div.innerHTML = `top`;
+    //     // div.addEventListener('click', top.scrollTo({ top: 0, behavior: 'smooth' }) ); 
+    //     return top.append(div);
+    // }
+    // topBtn();
+
+
+
     window.addEventListener('scroll',()=>{
         yOffset = window.pageYOffset;
         scrollLoop();
         listAni();
     })
     // window.addEventListener('DOMContentLoaded',setLayout) //html DOM만 보이면처리
-    window.addEventListener('load',setLayout) 
-    window.addEventListener('resize',setLayout);
+    window.addEventListener('load',()=>{
+        //loading
+        const load = document.querySelector('.loading');
+        load.style.display='none';
 
+        setLayout();
+    }) 
+    window.addEventListener('resize',setLayout);
+    
 })();
