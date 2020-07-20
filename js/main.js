@@ -174,11 +174,10 @@
         let winY = yOffset;
         const mainPage = document.querySelector('#scroll-section-0').offsetHeight;
         const listHeight = document.querySelector('#boxList').offsetHeight;
-        const listBox = document.querySelectorAll('.con-box-list');
         const start = mainPage - 760;
         const end = mainPage + listHeight;
         let lineBar = document.querySelector('#scroll-section-1 .line-bar');
-        
+
         if( winY >= start ){
             winY = winY - start;
             let inHeight = end-start;
@@ -188,8 +187,6 @@
             lineBar.style.height = `${percent}%`;
             lineBar.style.boxShadow = `rgba(59, 183, 255,.5) 0px 0px 2px 0.01em`;
         }
-        
-        console.log(listBox.length)
     }
 
     
