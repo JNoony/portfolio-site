@@ -176,7 +176,41 @@
         const listHeight = document.querySelector('#boxList').offsetHeight;
         const start = mainPage - 760;
         const end = mainPage + listHeight;
-        let lineBar = document.querySelector('#scroll-section-1 .line-bar');
+        const lineBar = document.querySelector('#scroll-section-1 .line-bar');
+
+        const listBox = document.querySelectorAll('#scroll-section-1 .con-box-list');
+        const arr = [];
+        for(var i=0;i<listBox.length;i++){
+            arr.push( (listBox[i].getBoundingClientRect().top + winY) - mainPage );           
+        }
+
+        if( (winY - start) < arr[1] ){
+            listBox[0].childNodes[1].style.color = '#b8caec';
+            listBox[0].childNodes[1].style.transition = 'all .3s';
+        }
+        else if( (winY - start) < arr[2] ){
+            listBox[1].childNodes[1].style.color = '#b8caec';
+            listBox[1].childNodes[1].style.transition = 'all .3s';
+        }
+        else if( (winY - start) < arr[3] ){
+            listBox[2].childNodes[1].style.color = '#b8caec';
+            listBox[2].childNodes[1].style.transition = 'all .3s';
+        }
+        else if( (winY - start) < arr[4] ){
+            listBox[3].childNodes[1].style.color = '#b8caec';
+            listBox[3].childNodes[1].style.transition = 'all .3s';
+        }
+        else if( (winY - start) < arr[5] ){
+            listBox[4].childNodes[1].style.color = '#b8caec';
+            listBox[4].childNodes[1].style.transition = 'all .3s';
+        }
+        else if( (winY - start) >= arr[5] ){
+            listBox[5].childNodes[1].style.color = '#b8caec';
+            listBox[5].childNodes[1].style.transition = 'all .3s';
+        }
+        else{
+            listBox.childNodes[1].style.color = '#e9e9e9';
+        }
 
         if( winY >= start ){
             winY = winY - start;
