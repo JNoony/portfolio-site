@@ -45,12 +45,9 @@
             scrollHeight:0, 
             objs:{
                 container: document.querySelector('#scroll-section-1'),
-                bar: document.querySelector('#scroll-section-1 .line-bar')
+                // prevHeight: document.querySelector('#scroll-section-0').offsetHeight,
+                // bar: document.querySelector('#scroll-section-1 .line-bar'),
             },
-            values:{
-                barHeight_in: [0, 97, {start:0.1, end:0.9} ],
-                barHeight_out: [97, 0, {start:0.9, end:0.1} ],
-            }
         },
         {   //2
             type: 'normal',
@@ -173,48 +170,30 @@
         //2p
         let winY = yOffset;
         const mainPage = document.querySelector('#scroll-section-0').offsetHeight;
+        const lineBar = document.querySelector('#scroll-section-1 .line-bar');
         const listHeight = document.querySelector('#boxList').offsetHeight;
         const start = mainPage - 760;
         const end = mainPage + listHeight;
-        const lineBar = document.querySelector('#scroll-section-1 .line-bar');
 
         const listBox = document.querySelectorAll('#scroll-section-1 .con-box-list');
         const arr = [];
         for(var i=0;i<listBox.length;i++){
-            arr.push( (listBox[i].getBoundingClientRect().top + winY) - mainPage );           
-        }
-
-        if( (winY - start) < arr[1] ){
-            listBox[0].childNodes[1].style.color = '#b8caec';
-            listBox[0].childNodes[1].style.transition = 'all .3s';
-        }
-        else if( (winY - start) < arr[2] ){
-            listBox[1].childNodes[1].style.color = '#b8caec';
-            listBox[1].childNodes[1].style.transition = 'all .3s';
-        }
-        else if( (winY - start) < arr[3] ){
-            listBox[2].childNodes[1].style.color = '#b8caec';
-            listBox[2].childNodes[1].style.transition = 'all .3s';
-        }
-        else if( (winY - start) < arr[4] ){
-            listBox[3].childNodes[1].style.color = '#b8caec';
-            listBox[3].childNodes[1].style.transition = 'all .3s';
-        }
-        else if( (winY - start) < arr[5] ){
-            listBox[4].childNodes[1].style.color = '#b8caec';
-            listBox[4].childNodes[1].style.transition = 'all .3s';
-        }
-        else if( (winY - start) >= arr[5] ){
-            listBox[5].childNodes[1].style.color = '#b8caec';
-            listBox[5].childNodes[1].style.transition = 'all .3s';
-        }
-        else{
-            listBox.childNodes[1].style.color = '#e9e9e9';
+            arr.push( (listBox[i].getBoundingClientRect().top + winY) - mainPage );   
+            
+            if( (winY - start) < arr[i+1] ){
+                listBox[i].childNodes[1].style.color = '#ddeaf6';
+                listBox[i].childNodes[1].style.transition = 'all 1s';     
+            }else if( (winY - start) >= arr[arr.length-1] ){
+                listBox[arr.length-1].childNodes[1].style.color = '#ddeaf6';
+                listBox[arr.length-1].childNodes[1].style.transition = 'all 1s';
+            }
+            else{
+                listBox[i].childNodes[1].style.color = '#e9e9e9';
+            }
         }
 
         if( winY >= start ){
             winY = winY - start;
-            let inHeight = end-start;
             let percent = (winY*100)/(end-start);
             if( percent > 97 ) percent = 97; 
 
