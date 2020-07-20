@@ -170,25 +170,26 @@
 
     //페이지 상관없이 스크롤 높이로 애니메이션 실행하게 하기
     function listAni(){
-        // //2p
+        //2p
         let winY = yOffset;
         const mainPage = document.querySelector('#scroll-section-0').offsetHeight;
         const listHeight = document.querySelector('#boxList').offsetHeight;
+        const listBox = document.querySelectorAll('.con-box-list');
         const start = mainPage - 760;
         const end = mainPage + listHeight;
         let lineBar = document.querySelector('#scroll-section-1 .line-bar');
         
-        if( winY >= start){
-            winY=0;
-            winY = window.pageYOffset;
-            // lineBar.style.height = `${}`
-            console.log( winY )
-        }
+        if( winY >= start ){
+            winY = winY - start;
+            let inHeight = end-start;
+            let percent = (winY*100)/(end-start);
+            if( percent > 97 ) percent = 97; 
 
-        console.log( '2p winY : ', winY )
-        console.log( '2p mainPage : ', mainPage )
-        console.log( '2p listHeight : ', listHeight )
-        console.log( '2p start, end : ', start, end )
+            lineBar.style.height = `${percent}%`;
+            lineBar.style.boxShadow = `rgba(59, 183, 255,.5) 0px 0px 2px 0.01em`;
+        }
+        
+        console.log(listBox.length)
     }
 
     
