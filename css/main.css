@@ -51,7 +51,9 @@
     margin-top: 5%;
     letter-spacing: .1em;
     font-weight: 100;
+    line-height: 1;
 }
+.fix-text .visual-title small{ font-size: 1rem; }
 .fix-text .visual-title+small{
     display: block;
     text-align: center;
@@ -65,7 +67,6 @@
 #show-scene-0 #scroll-section-0 .sticky-elem,
 #show-scene-1 #scroll-section-1 .sticky-elem,
 #show-scene-2 #scroll-section-2 .sticky-elem { display: block; }
-
 
 
 
@@ -126,13 +127,17 @@
 .list-text-link{
     text-align: center;
 }
+.list-text-link a:first-child{margin-right: 5px;}
 .list-text-link .btn-defalut{
     display: inline-block;
     text-decoration: none;
-    padding: 1em 4em;
+    padding: 1em;
     border:1px solid #111;
     margin-top: 20px;
     color: #111;
+    min-width: 38%;
+    letter-spacing: -.05em;
+    box-sizing: border-box;
 }
 .list-text-link a:not(.disable):hover{
     background: #375486;
@@ -144,12 +149,13 @@
     transition: all .3s;
 }
 
-.list-text-link .disable{
-    border-color: #d8d5d5;
+a[disable]{
+    border-color: #d8d5d5 !important;
     background: #ddd;
-    color: #999;
+    color: #999 !important;
     pointer-events: none;
 }
+
 
 
 /* 마지막 페이지 */
@@ -228,9 +234,6 @@
     }
 
     /* 리스트 */
-    /* .section-list .con-box{
-        box-sizing: border-box;
-    } */
     .con-box-list .list-num{
         font-size: 20vw;
     }
