@@ -177,18 +177,28 @@
 
         const listBox = document.querySelectorAll('#scroll-section-1 .con-box-list');
         const arr = [];
+        const eleStyle = (ele,i,y,opa)=>{
+            ele.style.transition = 'all 2s';
+            ele.style.transition.delay = `${i+3}s`; 
+            ele.style.transform = `translateY(${y})`;  
+            ele.style.opacity = opa; 
+        }
+        
         for(var i=0;i<listBox.length;i++){
             arr.push( (listBox[i].getBoundingClientRect().top + winY) - mainPage );   
-            
+
             if( (winY - start) < arr[i+1] ){
                 listBox[i].childNodes[1].style.color = '#ddeaf6';
-                listBox[i].childNodes[1].style.transition = 'all 1s';     
+                eleStyle( listBox[i], i, 0, 1);
             }else if( (winY - start) >= arr[arr.length-1] ){
+                //last list
                 listBox[arr.length-1].childNodes[1].style.color = '#ddeaf6';
-                listBox[arr.length-1].childNodes[1].style.transition = 'all 1s';
+                eleStyle( listBox[arr.length-1], i, 0, 1 );
             }
             else{
+                //reset
                 listBox[i].childNodes[1].style.color = '#e9e9e9';
+                eleStyle( listBox[i], i,'20%',0)
             }
         }
 
