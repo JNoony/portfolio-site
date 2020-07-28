@@ -42,7 +42,8 @@
 
 .fix-text{
     position: fixed;
-    bottom: 23vh;left: 0;right: 0;
+    left: 0;right: 0;
+    top: calc(100vh - 350px);
 }
 .fix-text .visual-title { 
     text-align: center; 
@@ -210,7 +211,15 @@ a[disable]{
 
 
 
-
+@media screen and (max-width:1330px){
+    .scroll-section{}
+    .scroll-section.visual h2{font-size: 5rem;}
+    .fix-text{
+        top: calc(100vh - 225px);
+    }
+}
+@media screen and (max-width:600px){}
+@media screen and (max-width:600px){}
 
 
 @media screen and (max-width:600px){
