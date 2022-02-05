@@ -133,7 +133,7 @@
 .list-text-link{
     text-align: center;
 }
-.list-text-link a:first-child{margin-right: 5px;}
+.list-text-link a:not(:last-child){margin-right: 5px;}
 .list-text-link .btn-defalut{
     display: inline-block;
     text-decoration: none;
