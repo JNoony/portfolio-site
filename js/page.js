@@ -3,7 +3,7 @@ const pageData = [
         head:{
             class:"sub-head",
             title:'test1', 
-            subTitle:'test1 내용입니답'
+            subTitle:'test1 내용입니답!!'
         },
     },
     {

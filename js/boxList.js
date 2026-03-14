@@ -31,7 +31,7 @@ const listData = [
             {   href:"https://jnoony-portfolio-demopage.netlify.app/mobintouch",
                 class:"btn-defalut",
                 btnName:"DEMO" },
-            {   href:"https://github.com/JNoony/portfolio/tree/master/mobintouch",
+            {   href:"https://github.com/JNoony/portfolio/tree/master/src/mobintouch",
                 class:"btn-defalut color-b",
                 btnName:"Read more Code" },
         ]
@@ -95,9 +95,9 @@ const listData = [
         <span>#javascript</span><span>#jQuery</span>`,
         alert:'',
         button:[
-            {   href:"javascript:void(0)",
-                class:"btn-defalut disable",
-                btnName:"데모 준비중" },
+            {   href:"https://jnoony-portfolio-demopage.netlify.app/webfertile/",
+                class:"btn-defalut",
+                btnName:"DEMO" },
             {   href:"https://github.com/JNoony/portfolio/tree/master/webfertile",
                 class:"btn-defalut color-b",
                 btnName:"Read more Code" },
